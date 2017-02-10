@@ -1,14 +1,15 @@
 ﻿using SimpleHttpServer.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace SimpleHttpServer.Models
 {
     public class HttpResponse
     {
+        public HttpResponse()
+        {
+            this.Header = new Header(HeaderType.HttpResponse);
+            this.Content = new byte[] { };
+        }
         public ResponseStatusCode StatusCode { get; set; }
 
         public string StatusMessage { get { return this.StatusCode.ToString(); } }
@@ -25,7 +26,7 @@ namespace SimpleHttpServer.Models
         public override string ToString()
         {
             var response = new StringBuilder();
-            response.AppendLine($"HTTP/1.0 {this.StatusCode} {this.StatusMessage}");
+            response.AppendLine($"HTTP/1.0 {(int)this.StatusCode} {this.StatusMessage}");
             response.AppendLine(Header.ToString());
 
             return response.ToString();

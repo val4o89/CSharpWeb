@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleHttpServer.Enums
+﻿namespace SimpleHttpServer.Enums
 {
     public enum ResponseStatusCode
     {
@@ -13,6 +7,7 @@ namespace SimpleHttpServer.Enums
         BadRequest = 400,
         Forbiden = 403,
         NotFound = 404,
+        MethodNotAllowed = 405,
         InternalServerError = 500,
         NotImplemented = 501,
         BadGateway = 502,

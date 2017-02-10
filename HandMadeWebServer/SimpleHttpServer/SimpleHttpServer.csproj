@@ -40,19 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\HttpServer.cs" />
     <Compile Include="Enums\HeaderType.cs" />
     <Compile Include="Enums\RequestMethod.cs" />
     <Compile Include="Enums\ResponseStatusCode.cs" />
     <Compile Include="Models\Cookie.cs" />
     <Compile Include="Models\CookieCollection.cs" />
-    <Compile Include="Models\Dictionary.cs" />
     <Compile Include="Models\Header.cs" />
-    <Compile Include="Models\HttpProcessor.cs" />
+    <Compile Include="Core\HttpProcessor.cs" />
     <Compile Include="Models\HttpRequest.cs" />
     <Compile Include="Models\HttpResponse.cs" />
     <Compile Include="Models\HttpResponseBuilder.cs" />
     <Compile Include="Models\Route.cs" />
-    <Compile Include="Models\StreamUtils.cs" />
+    <Compile Include="Utils\StreamUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
