@@ -24,7 +24,7 @@ namespace SimpleHttpServer.Models
         {
             var header = new StringBuilder();
 
-            header.AppendLine($"Content-Type: {this.Type.ToString()}");
+            header.AppendLine($"Content-Type: {this.ContentType}");
 
             if (Cookies.Count > 0)
             {
@@ -39,10 +39,10 @@ namespace SimpleHttpServer.Models
             }
             foreach (var otherParameter in OtherParameters)
             {
-                header.Append($"{otherParameter.Key}: {otherParameter.Value}");
+                header.AppendLine($"{otherParameter.Key}: {otherParameter.Value}");
             }
 
-            header.Append("\n\n");
+            header.AppendLine();
 
             return header.ToString();
         }

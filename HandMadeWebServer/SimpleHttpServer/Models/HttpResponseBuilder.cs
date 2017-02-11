@@ -9,7 +9,7 @@ namespace SimpleHttpServer.Models
         {
             return new HttpResponse
             {
-                ContentAsUTF8 = File.ReadAllText("../Resourses/Pages/500.html"),
+                ContentAsUTF8 = File.ReadAllText("../../../SimpleHttpServer/Resourses/Pages/500.html"),
                 Header = new Header(HeaderType.HttpResponse),
                 StatusCode = ResponseStatusCode.InternalServerError
             };
@@ -19,7 +19,7 @@ namespace SimpleHttpServer.Models
         {
             return new HttpResponse
             {
-                ContentAsUTF8 = File.ReadAllText("../Resourses/Pages/404.html"),
+                ContentAsUTF8 = File.ReadAllText("../../../SimpleHttpServer/Resourses/Pages/404.html"),
                 Header = new Header(HeaderType.HttpResponse),
                 StatusCode = ResponseStatusCode.InternalServerError
             };

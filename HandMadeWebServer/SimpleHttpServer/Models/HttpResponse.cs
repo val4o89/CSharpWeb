@@ -1,5 +1,9 @@
 ﻿using SimpleHttpServer.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SimpleHttpServer.Models
 {
@@ -7,8 +11,8 @@ namespace SimpleHttpServer.Models
     {
         public HttpResponse()
         {
-            this.Header = new Header(HeaderType.HttpResponse);
-            this.Content = new byte[] { };
+            Header = new Header(HeaderType.HttpResponse);
+            Content = new byte[] { };
         }
         public ResponseStatusCode StatusCode { get; set; }
 
@@ -27,8 +31,8 @@ namespace SimpleHttpServer.Models
         {
             var response = new StringBuilder();
             response.AppendLine($"HTTP/1.0 {(int)this.StatusCode} {this.StatusMessage}");
-            response.AppendLine(Header.ToString());
-
+            response.Append(Header.ToString());
+            Console.WriteLine(response);
             return response.ToString();
         }
     }
