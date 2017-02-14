@@ -40,7 +40,7 @@ namespace SimpleHttpServer.Core
             if (!routes.Any())
                 return HttpResponseBuilder.NotFound();
 
-            var route = routes.SingleOrDefault(x => x.Method == Request.Method);
+            var route = routes.FirstOrDefault(x => x.Method == Request.Method);
 
             if (route == null)
                 return new HttpResponse()

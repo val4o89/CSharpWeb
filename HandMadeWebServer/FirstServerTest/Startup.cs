@@ -1,4 +1,5 @@
-﻿using SimpleHttpServer.Core;
+﻿using KivesDatabase;
+using SimpleHttpServer.Core;
 using SimpleHttpServer.Enums;
 using SimpleHttpServer.Models;
 using System;
@@ -11,6 +12,8 @@ namespace FirstServerTest
     {
         public static void Main(string[] args)
         {
+            var db = new KnivesDbContext();
+
             var routes = new List<Route>()
             {
                 new Route()
@@ -66,7 +69,25 @@ namespace FirstServerTest
                         return response;
                     }
                 },
-                                new Route()
+                    new Route()
+                {
+                    Name = "Products",
+                    Method = RequestMethod.GET,
+                    UrlRegex = @"^/products\.html.*$",
+                    Callable = (request) =>
+                    {
+                        var response = new HttpResponse()
+                        {
+
+                            StatusCode = ResponseStatusCode.OK,
+                            ContentAsUTF8 = ProductsPage.ReturnPage(SearchKnives.Search(db, request.Url))
+
+                        };
+                        response.Header.Cookies.AddCookie(new Cookie { Name = "language", Value = "EN" });
+                        return response;
+                    }
+                },
+                new Route()
                 {
                     Name = "HtmlsRoute",
                     Method = RequestMethod.GET,
@@ -74,11 +95,15 @@ namespace FirstServerTest
                     Callable = (request) =>
                     {
                         var fileName = request.Url.Substring(request.Url.LastIndexOf("/"));
-                        return new HttpResponse()
+                        var response = new HttpResponse()
                         {
+
                             StatusCode = ResponseStatusCode.OK,
                             ContentAsUTF8 = File.ReadAllText($"../../content/{fileName}")
+
                         };
+                        response.Header.Cookies.AddCookie(new Cookie { Name = "language", Value = "EN" });
+                        return response;
                     }
                 },
                 new Route()
@@ -88,6 +113,8 @@ namespace FirstServerTest
                     UrlRegex = @"^/.+\.html$",
                     Callable = (request) =>
                     {
+                        RetrieveContactUs.AddMessageToDb(db, request.Content);
+                        Console.WriteLine(request.Url);
                         var fileName = request.Url.Substring(request.Url.LastIndexOf("/"));
                         return new HttpResponse()
                         {
