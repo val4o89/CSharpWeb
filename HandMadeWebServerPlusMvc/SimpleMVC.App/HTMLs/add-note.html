@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>User: {0}</h1>
+    <br />
+    <form method="POST">
+        <label for="Title">Title: </label>
+        <input name="Title" type="text"/>
+        <label for="Content"></label>
+        <input type="text" name="Content"/>
+        <input type="hidden" name="Id" {1}/>
+        <input type="submit" value="Add Note"/>
+    </form>
+    <br />
+    <h5>List of notes</h5>
+    <br />
+    <ul>
+        {2}
+    </ul>
+</body>
+</html>
