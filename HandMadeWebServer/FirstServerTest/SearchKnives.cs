@@ -1,14 +1,11 @@
-﻿using KivesDatabase;
-using Knives.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FirstServerTest
+﻿namespace FirstServerTest
 {
+    using KivesDatabase;
+    using Knives.Models;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net;
+
     public static class SearchKnives
     {
         public static IEnumerable<Knive> Search(KnivesDbContext db, string url)

@@ -1,10 +1,9 @@
-﻿using SimpleHttpServer.Models;
-using System.IO;
-using System.Text;
-using System.Threading;
-
-namespace SimpleHttpServer.Utils
+﻿namespace SimpleHttpServer.Utils
 {
+    using Models;
+    using System.IO;
+    using System.Text;
+    using System.Threading;
     public static class StreamUtils
     {
         public static string ReadLine(Stream stream)

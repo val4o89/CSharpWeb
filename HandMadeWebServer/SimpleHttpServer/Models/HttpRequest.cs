@@ -1,8 +1,8 @@
-﻿using SimpleHttpServer.Enums;
-using System.Text;
-
-namespace SimpleHttpServer.Models
+﻿namespace SimpleHttpServer.Models
 {
+    using Enums;
+    using System.Text;
+
     public class HttpRequest
     {
         public RequestMethod Method { get; set; }

@@ -1,13 +1,12 @@
-﻿using KivesDatabase;
-using SimpleHttpServer.Core;
-using SimpleHttpServer.Enums;
-using SimpleHttpServer.Models;
-using System;
-using System.Collections.Generic;
-using System.IO;
-
-namespace FirstServerTest
+﻿namespace FirstServerTest
 {
+    using KivesDatabase;
+    using SimpleHttpServer.Core;
+    using SimpleHttpServer.Enums;
+    using SimpleHttpServer.Models;
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
     public class Startup
     {
         public static void Main(string[] args)

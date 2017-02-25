@@ -1,8 +1,7 @@
-﻿using SimpleHttpServer.Enums;
-using System;
-
-namespace SimpleHttpServer.Models
+﻿namespace SimpleHttpServer.Models
 {
+    using Enums;
+    using System;
     public class Route
     {
         public string Name { get; set; }

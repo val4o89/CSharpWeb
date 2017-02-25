@@ -1,11 +1,12 @@
-﻿using SimpleHttpServer.Models;
-using System.Collections.Generic;
-using System.Net;
-using System.Net.Sockets;
-using System.Threading;
-
+﻿
 namespace SimpleHttpServer.Core
 {
+    using Models;
+    using System.Collections.Generic;
+    using System.Net;
+    using System.Net.Sockets;
+    using System.Threading;
+
     public class HttpServer
     {
         public HttpServer(int port, IEnumerable<Route> routes)

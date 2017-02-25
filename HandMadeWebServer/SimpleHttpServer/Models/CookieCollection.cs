@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
-namespace SimpleHttpServer.Models
+﻿namespace SimpleHttpServer.Models
 {
+    using System.Collections;
+    using System.Collections.Generic;
+
     public class CookieCollection : IEnumerable<Cookie>
     {
         private Dictionary<string, Cookie> cookieCollection;

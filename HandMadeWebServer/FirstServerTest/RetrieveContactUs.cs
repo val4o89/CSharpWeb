@@ -1,14 +1,9 @@
-﻿using KivesDatabase;
-using Knives.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FirstServerTest
+﻿namespace FirstServerTest
 {
+    using KivesDatabase;
+    using Knives.Models;
+    using System.Linq;
+    using System.Net;
     public static class RetrieveContactUs
     {
         public static void AddMessageToDb(KnivesDbContext db, string content)
