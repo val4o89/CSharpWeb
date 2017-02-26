@@ -1,16 +1,15 @@
-﻿using SimpleHttpServer.Enums;
-using SimpleHttpServer.Models;
-using SimpleHttpServer.Utilities;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.Sockets;
-using System.Text;
-using System.Text.RegularExpressions;
-
-namespace SimpleHttpServer
+﻿namespace SimpleHttpServer
 {
+    using Enums;
+    using Models;
+    using Utilities;
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Net.Sockets;
+    using System.Text;
+    using System.Text.RegularExpressions;
     public class HttpProcessor
     {
         private IList<Route> Routes;

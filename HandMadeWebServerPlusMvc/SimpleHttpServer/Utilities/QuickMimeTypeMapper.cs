@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SimpleHttpServer.Utilities
+﻿namespace SimpleHttpServer.Utilities
 {
+    using System;
+    using System.Collections.Generic;
     public class QuickMimeTypeMapper
     {
         public static string GetMimeType(string fileExtension)

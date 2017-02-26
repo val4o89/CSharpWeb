@@ -1,14 +1,9 @@
-﻿using SimpleMVC.App.MVC.Interfaces;
-using SimpleMVC.App.MVC.Interfaces.Generic;
-using SimpleMVC.App.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.App.Views.User
+﻿namespace SimpleMVC.App.Views.User
 {
+    using SimpleMVC.App.MVC.Interfaces.Generic;
+    using SimpleMVC.App.ViewModels;
+    using System.Text;
+
     public class All : IRenderable<AllNeededUserDataViewModel>
     {
         public AllNeededUserDataViewModel Model { get; set; }

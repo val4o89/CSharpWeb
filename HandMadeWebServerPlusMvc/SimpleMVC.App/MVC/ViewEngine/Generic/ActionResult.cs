@@ -1,12 +1,7 @@
-﻿using SimpleMVC.App.MVC.Interfaces.Generic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.App.MVC.ViewEngine.Generic
+﻿namespace SimpleMVC.App.MVC.ViewEngine.Generic
 {
+    using SimpleMVC.App.MVC.Interfaces.Generic;
+    using System;
     public class ActionResult<T> : IActionResult<T>
     {
         public ActionResult(string viewFullQualifiedName, T model)

@@ -1,13 +1,8 @@
-﻿using SimpleMVC.App.MVC.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.App.Views.Home
+﻿namespace SimpleMVC.App.Views.Home
 {
+    using SimpleMVC.App.MVC.Interfaces;
+    using System.IO;
+
     public class Index : IRenderable
     {
         public string Render()

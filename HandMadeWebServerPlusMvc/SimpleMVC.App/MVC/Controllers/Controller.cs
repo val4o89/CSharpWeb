@@ -1,16 +1,10 @@
-﻿using SimpleMVC.App.MVC.Interfaces;
-using SimpleMVC.App.MVC.Interfaces.Generic;
-using SimpleMVC.App.MVC.ViewEngine;
-using SimpleMVC.App.MVC.ViewEngine.Generic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.App.MVC.Controllers
+﻿namespace SimpleMVC.App.MVC.Controllers
 {
+    using SimpleMVC.App.MVC.Interfaces;
+    using SimpleMVC.App.MVC.Interfaces.Generic;
+    using SimpleMVC.App.MVC.ViewEngine;
+    using SimpleMVC.App.MVC.ViewEngine.Generic;
+    using System.Runtime.CompilerServices;
     public abstract class Controller
     {
         protected IActionResult View([CallerMemberName] string callee = "")

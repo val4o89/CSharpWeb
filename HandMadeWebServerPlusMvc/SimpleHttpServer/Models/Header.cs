@@ -1,9 +1,8 @@
-﻿using SimpleHttpServer.Enums;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SimpleHttpServer.Models
+﻿namespace SimpleHttpServer.Models
 {
+    using Enums;
+    using System.Collections.Generic;
+    using System.Text;
     public class Header
     {
         public Header(HeaderType type)

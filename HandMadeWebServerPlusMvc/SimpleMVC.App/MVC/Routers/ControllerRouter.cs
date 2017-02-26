@@ -1,19 +1,16 @@
-﻿using SimpleMVC.App.MVC.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SimpleHttpServer.Models;
-using SimpleHttpServer.Enums;
-using System.Net;
-using System.Globalization;
-using System.Reflection;
-using SimpleMVC.App.MVC.Attributes.Methods;
-using SimpleMVC.App.MVC.Controllers;
-
-namespace SimpleMVC.App.MVC.Routers
+﻿namespace SimpleMVC.App.MVC.Routers
 {
+    using SimpleMVC.App.MVC.Interfaces;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using SimpleHttpServer.Models;
+    using SimpleHttpServer.Enums;
+    using System.Net;
+    using System.Globalization;
+    using System.Reflection;
+    using SimpleMVC.App.MVC.Attributes.Methods;
+    using SimpleMVC.App.MVC.Controllers;
     public class ControllerRouter : IHandleable
     {
         private IDictionary<string, string> getParams;

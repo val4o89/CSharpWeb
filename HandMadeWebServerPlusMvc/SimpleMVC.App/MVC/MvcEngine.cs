@@ -1,13 +1,9 @@
-﻿using SimpleHttpServer;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.App.MVC
+﻿namespace SimpleMVC.App.MVC
 {
+    using SimpleHttpServer;
+    using System;
+    using System.Reflection;
+
     public static class MvcEngine
     {
         public static void Run(HttpServer server)

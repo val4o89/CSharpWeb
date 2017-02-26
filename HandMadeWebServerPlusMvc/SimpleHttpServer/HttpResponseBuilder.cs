@@ -1,9 +1,8 @@
-﻿using SimpleHttpServer.Enums;
-using SimpleHttpServer.Models;
-using System.IO;
-
-namespace SimpleHttpServer
+﻿namespace SimpleHttpServer
 {
+    using Enums;
+    using Models;
+    using System.IO;
     public static class HttpResponseBuilder
     {
         public static HttpResponse InternalServerError()

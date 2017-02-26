@@ -1,12 +1,7 @@
-﻿using SimpleHttpServer.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.App.MVC.Interfaces
+﻿namespace SimpleMVC.App.MVC.Interfaces
 {
+    using SimpleHttpServer.Models;
+
     public interface IHandleable
     {
         HttpResponse Handle(HttpRequest request);

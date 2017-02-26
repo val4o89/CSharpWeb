@@ -1,12 +1,8 @@
-﻿using SimpleMVC.App.BindingModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.App.ViewModels
+﻿namespace SimpleMVC.App.ViewModels
 {
+    using SimpleMVC.App.BindingModels;
+    using System.Collections.Generic;
+
     public class AllNeededUserDataViewModel
     {
         public AllNeededUserDataViewModel()

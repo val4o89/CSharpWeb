@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.Models
+﻿namespace SimpleMVC.Models
 {
+    using System.Collections.Generic;
+
     public class User
     {
         private ICollection<Note> notes;

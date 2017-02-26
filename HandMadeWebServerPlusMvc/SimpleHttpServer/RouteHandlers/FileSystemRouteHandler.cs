@@ -1,13 +1,13 @@
-﻿using SimpleHttpServer.Enums;
-using SimpleHttpServer.Models;
-using SimpleHttpServer.Utilities;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-
-namespace SimpleHttpServer.RouteHandlers
+﻿namespace SimpleHttpServer.RouteHandlers
 {
+    using Enums;
+    using Models;
+    using Utilities;
+    using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Text.RegularExpressions;
+
     public class FileSystemRouteHandler
     {
         public string BasePath { get; set; }

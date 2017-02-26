@@ -1,20 +1,15 @@
-﻿using SimpleMvc.Data;
-using SimpleMVC.App.BindingModels;
-using SimpleMVC.App.MVC;
-using SimpleMVC.App.MVC.Attributes.Methods;
-using SimpleMVC.App.MVC.Controllers;
-using SimpleMVC.App.MVC.Interfaces;
-using SimpleMVC.App.MVC.Interfaces.Generic;
-using SimpleMVC.App.ViewModels;
-using SimpleMVC.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleMVC.App.Controllers
+﻿namespace SimpleMVC.App.Controllers
 {
+    using SimpleMvc.Data;
+    using SimpleMVC.App.BindingModels;
+    using SimpleMVC.App.MVC.Attributes.Methods;
+    using SimpleMVC.App.MVC.Controllers;
+    using SimpleMVC.App.MVC.Interfaces;
+    using SimpleMVC.App.MVC.Interfaces.Generic;
+    using SimpleMVC.App.ViewModels;
+    using SimpleMVC.Models;
+    using System.Collections.Generic;
+    using System.Linq;
     public class UserController : Controller
     {
         [HttpGet]
