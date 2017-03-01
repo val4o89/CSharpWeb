@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>PizzaMore - Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <script src="/jquery/jquery-3.1.1.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <nav id="navigation" class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">PizzaMore</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/home/index">Home</a>
+                        </li>
+                        <li>
+                            <a href="/home/">Call us</a>
+                        </li>
+                    </ul>
+                    <form method="GET">
+                        <input id="languageBtn" class="btn btn-primary navbar-btn" type="submit" formaction="/home/language" name="language" value="EN"
+                            onclick="change(this)">
+                            <a class="btn btn-success navbar-btn" href="/home/mysuggestions">My Suggestions</a>
+                            <a class="btn btn-success navbar-btn" href="/home/addsuggestion">Add Suggestion</a>
+                            <a class="btn btn-info navbar-btn" href="/home/menu">Menu</a>
+                            <a class="btn btn-danger navbar-btn" href="/home/signout">Sign Out</a>
+                    </form>
+                </div>
+            </nav>

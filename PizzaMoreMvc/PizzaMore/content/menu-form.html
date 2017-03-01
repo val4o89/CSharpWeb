@@ -1,0 +1,10 @@
+<form class="list-group" action="/home/addsuggestion" method="POST">
+    <label for="Title">Title of pizza: </label>
+    <input  class="list-group-item" type="text" name="Title"><br>
+    <label for="Reciepe">Reciepe: </label>
+    <input class="list-group-item" type="text" name="Reciepe"><br>
+    <label for="ImageUrl">Image URL: </label>
+    <input class="list-group-item" type="text" name="ImageUrl">
+    <input type="hidden" name="OwnerId" {0}>
+    <input type="submit" class="btn btn-primary" value="Add Pizza">
+</form>
