@@ -6,6 +6,7 @@
     using Store.ViewModels;
     using SimpleHttpServer.Models;
     using System;
+    using SimpleHttpServer.Utilities;
 
     public class UserService
     {
@@ -90,10 +91,13 @@
             this.uow.SaveChanges();
         }
 
-        public void Logout(HttpSession session)
+        public void Logout(HttpSession session, HttpResponse response)
         {
             this.uow.Logins.FindFirst(l => l.SessionId == session.Id && l.IsActive == true).IsActive = false;
 
+            session = SessionCreator.Create();
+            var sessionCookie = new Cookie("sessionId", session.Id + "; HttpOnly; path=/");
+            response.Header.AddCookie(sessionCookie);
             this.uow.SaveChanges();
         }
     }

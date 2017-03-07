@@ -34,7 +34,7 @@
                 }
             }
 
-            this.Redirect(response, "/home/login");
+            this.Redirect(response, "/users/login");
             return null;
         }
 
@@ -50,7 +50,7 @@
                 }
             }
 
-            this.Redirect(response, "/home/login");
+            this.Redirect(response, "/users/login");
             return null;
         }
 
@@ -91,7 +91,7 @@
         }
 
         [HttpPost]
-        public IActionResult Edit(EditUserBindingModel model, HttpResponse response, HttpSession session)
+        public IActionResult Edit(EditGameBindingModel model, HttpResponse response, HttpSession session)
         {
             if (autenticator.HasLoggedInUser(session))
             {
@@ -108,6 +108,40 @@
             }
 
             this.Redirect(response, "/users/login");
+
+            return null;
+        }
+
+        [HttpGet]
+        public IActionResult Add(HttpSession session, HttpResponse response)
+        {
+            if (autenticator.HasLoggedInUser(session))
+            {
+                if (autenticator.IsLoggedUserAdmin(session))
+                {
+                    return this.View();
+                }
+            }
+
+            this.Redirect(response, "/home/login");
+
+            return null;
+        }
+
+        [HttpPost]
+        public IActionResult Add(AddGameBindingModel model, HttpResponse response, HttpSession session)
+        {
+            if (autenticator.HasLoggedInUser(session))
+            {
+                if (autenticator.IsLoggedUserAdmin(session))
+                {
+                    if (service.IsValidGame(model))
+                    {
+                        this.service.AddGame(model);
+                        this.Redirect(response, "/manager/all");
+                    }
+                }
+            }
 
             return null;
         }

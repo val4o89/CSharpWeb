@@ -18,5 +18,6 @@
         public const string AdminGames = "/admin-games.html";
         public const string DeleteGame = "/delete-game.html";
         public const string EditGame = "/edit-game.html";
+        public const string Add = "/add-game.html";
     }
 }

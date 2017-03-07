@@ -5,6 +5,7 @@
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Text;
     using ViewModels;
 
@@ -27,7 +28,7 @@
                 {
                     sbThumbnail.AppendLine("<div class=\"card-group\">");
                 }
-                sbThumbnail.AppendLine(string.Format(thumb, $"src=\"{game.Thumbnail}\"", game.Title, game.Price, game.Size, game.Description.Substring(0, 300), game.GameId));
+                sbThumbnail.AppendLine(string.Format(thumb, $"src=\"{game.Thumbnail}\"", game.Title, game.Price, game.Size, game.Description.Substring(0, 300 < game.Description.Length ? 300 : game.Description.Length), game.GameId));
                 if (thumbCounter == 3)
                 {
                     sbThumbnail.AppendLine("</div>");

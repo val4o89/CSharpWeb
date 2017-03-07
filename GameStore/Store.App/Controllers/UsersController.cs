@@ -78,7 +78,7 @@
         [HttpPost]
         public IActionResult Logout(HttpSession session, HttpResponse response)
         {
-            this.service.Logout(session);
+            this.service.Logout(session, response);
 
             this.Redirect(response, "/users/login");
 

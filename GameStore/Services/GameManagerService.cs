@@ -61,7 +61,7 @@
             };
         }
 
-        public void EditGame(EditUserBindingModel model)
+        public void EditGame(EditGameBindingModel model)
         {
             Game game = this.uow.Games.FindFirst(g => g.Id == model.Id);
             game.Description = model.Description;
@@ -74,7 +74,7 @@
             this.uow.SaveChanges();
         }
 
-        public bool AreValidGameChanges(EditUserBindingModel model)
+        public bool AreValidGameChanges(EditGameBindingModel model)
         {
             if (!char.IsUpper(model.Title[0]) || model.Title.Length < 3 || model.Title.Length > 100)
             {
@@ -92,6 +92,52 @@
             }
 
             if (model.YoutubeId.Length != 11)
+            {
+                return false;
+            }
+
+            if (model.Description.Length < 20)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public void AddGame(AddGameBindingModel model)
+        {
+            this.uow.Games.Add(new Game
+            {
+                Description = model.Description,
+                ImageThumbnail = model.Thumbnail,
+                Price = model.Price,
+                ReleaseDate = model.ReleaseDate,
+                Size = model.Size,
+                Title = model.Title,
+                Trailer = model.YouTubeId
+            });
+
+            this.uow.SaveChanges();
+        }
+
+        public bool IsValidGame(AddGameBindingModel model)
+        {
+            if (!char.IsUpper(model.Title[0]) || model.Title.Length < 3 || model.Title.Length > 100)
+            {
+                return false;
+            }
+
+            if (model.Price < 0.0m)
+            {
+                return false;
+            }
+
+            if (model.Size < 0.0m)
+            {
+                return false;
+            }
+
+            if (model.YouTubeId.Length != 11)
             {
                 return false;
             }

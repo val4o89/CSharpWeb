@@ -80,7 +80,7 @@ namespace SimpleHttpServer
                 string value = line.Substring(pos, line.Length - pos);
                 if (name == "Cookie")
                 {
-                    string[] cookieSaves = value.Split(';');
+                    string[] cookieSaves = value.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
                     foreach (var cookieSave in cookieSaves)
                     {
                         string[] cookiePair = cookieSave.Split('=').Select(x => x.Trim()).ToArray();

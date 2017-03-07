@@ -49,9 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddGameBindingModel.cs" />
     <Compile Include="BuyGameBindingModel.cs" />
     <Compile Include="DeleteGameBindingModel.cs" />
-    <Compile Include="EditUserBindingModel.cs" />
+    <Compile Include="EditGameBindingModel.cs" />
     <Compile Include="LoginUserBindingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterUserBindingModel.cs" />

@@ -59,6 +59,7 @@
     <Compile Include="Routes\RouteTable.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Manager\Add.cs" />
     <Compile Include="Views\Manager\All.cs" />
     <Compile Include="Views\Home\All.cs" />
     <Compile Include="Views\Home\Details.cs" />
